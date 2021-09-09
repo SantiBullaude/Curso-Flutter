@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Numero de click:', style: TextStyle(fontSize: 25)),
-            Text('0', style: TextStyle(fontSize: 30)),
+            Text('0', style: TextStyle(fontSize: 50)),
           ],
         )
 
