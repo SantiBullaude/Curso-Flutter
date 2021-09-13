@@ -16,7 +16,7 @@ class _ContadorPageState extends State <ContadorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stateful'),
+        title: Text('CCONTADOR'),
         centerTitle: true,
       ),
       body: Center(
