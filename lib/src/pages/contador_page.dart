@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-
-
 class ContadorPage extends StatefulWidget{
 
   @override
   createState()=> _ContadorPageState();
 
 }
-class _ContadorPageState extends State <ContadorPage>{
+class _ContadorPageState extends State <ContadorPage> {
 
   final _estiloTexto = new TextStyle(fontSize: 25);
   int _conteo = 0;
@@ -18,7 +16,7 @@ class _ContadorPageState extends State <ContadorPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Titulo'),
+        title: Text('Stateful'),
         centerTitle: true,
       ),
       body: Center(
@@ -35,9 +33,13 @@ class _ContadorPageState extends State <ContadorPage>{
         child: Icon(Icons.add),
         onPressed: () {
           print('Hola Mundo');
+          _conteo++;
+          setState(() {
+
+          });
         },
       ),
 
     );
-
+  }
 }
