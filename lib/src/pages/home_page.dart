@@ -1,6 +1,12 @@
+
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
 
   class HomePage extends StatelessWidget{
+    final estiloTexto = new TextStyle(fontSize: 25);
+    int conteo = 0;
+
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,12 +18,20 @@ import 'package:flutter/material.dart';
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Numero de click:', style: TextStyle(fontSize: 25)),
-            Text('0', style: TextStyle(fontSize: 80)),
+            Text('Numero de click:', style: estiloTexto),
+            Text('0', style: estiloTexto),
           ],
         )
 
-      )
+      ),
+       floatingActionButton: FloatingActionButton(
+         child: Icon(Icons.add),
+         onPressed: () {
+           print('Hola Mundo');
+         },
+       ),
+
     );
-  }
+   }
+
   }
