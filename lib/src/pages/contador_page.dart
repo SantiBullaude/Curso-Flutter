@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 class ContadorPage extends StatefulWidget{
@@ -29,17 +31,37 @@ class _ContadorPageState extends State <ContadorPage> {
           )
 
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          print('Hola Mundo');
-          _conteo++;
-          setState(() {
-
-          });
-        },
-      ),
-
+      floatingActionButton: _crearBotones()
     );
+  }
+  Widget _crearBotones (){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        SizedBox(width:30.0),
+        FloatingActionButton(child: Icon(Icons.exposure_zero),onPressed:_reset),
+        Expanded(child: SizedBox(width:30.0)),
+        FloatingActionButton(child: Icon(Icons.remove),onPressed:_restar),
+        SizedBox(width:30.0),
+        FloatingActionButton(child: Icon(Icons.add),onPressed:_agregar),
+
+    ],
+    );
+
+  }
+  void _agregar(){
+    setState(() {
+    _conteo++;
+    });
+  }
+  void _restar(){
+    setState(() {
+      _conteo--;
+    });
+  }
+  void _reset(){
+    setState(() {
+      _conteo=0;
+    });
   }
 }
